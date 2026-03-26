@@ -29,5 +29,5 @@ jobs:
           push: true
           # CHỖ NÀY CẦN SỬA: Thay "tencuaban" thành đúng tên tài khoản Docker Hub của bạn
           tags: |
-            tencuaban/bai-tap-java:latest
-            tencuaban/bai-tap-java:${{ github.sha }}
+  arkemperor/bai-tap-docker:latest
+  arkemperor/bai-tap-docker:${{ github.sha }}

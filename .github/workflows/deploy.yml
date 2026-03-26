@@ -24,7 +24,6 @@ jobs:
         with:
           context: .
           push: true
-          # NHỚ SỬA DÒNG DƯỚI NÀY THÀNH TÊN DOCKER HUB CỦA BẠN NHA
           tags: |
-  arkemperor/bai-tap-docker:latest
-  arkemperor/bai-tap-docker:${{ github.sha }}
+            arkemperor/bai-tap-java:latest
+            arkemperor/bai-tap-java:${{ github.sha }}

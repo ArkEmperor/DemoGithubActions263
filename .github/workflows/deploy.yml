@@ -10,24 +10,21 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # --- ROBOT 1: Lấy code của bạn từ GitHub về máy ảo ---
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # --- ROBOT 2: Đăng nhập vào Docker Hub (Dùng Secret đã lưu ở Bước 2) ---
       - name: Login to Docker Hub
         uses: docker/login-action@v3
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      # --- ROBOT 3: Đóng gói code thành Image và đẩy lên Docker Hub ---
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
         with:
           context: .
           push: true
-          # CHỖ NÀY CẦN SỬA: Thay "tencuaban" thành đúng tên tài khoản Docker Hub của bạn
+          # NHỚ SỬA DÒNG DƯỚI NÀY THÀNH TÊN DOCKER HUB CỦA BẠN NHA
           tags: |
   arkemperor/bai-tap-docker:latest
   arkemperor/bai-tap-docker:${{ github.sha }}

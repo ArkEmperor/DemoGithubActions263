@@ -28,7 +28,7 @@ jobs:
             arkemperor/bai-tap-java:latest
             arkemperor/bai-tap-java:${{ github.sha }}
 
-                 - name: Triển khai lên DevOps Classroom
+      - name: Triển khai lên DevOps Classroom
         run: |
           REPO="arkemperor/java-app-compose"
           CONTAINER_PORT=80

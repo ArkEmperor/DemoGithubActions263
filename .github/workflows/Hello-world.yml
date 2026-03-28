@@ -1,7 +1,8 @@
 name: Thử nghiệm đọc File README #HEllo
 on:
-Push:
-Branches: [ "main" ] #Chạy khi có code mới đẩy lên nhánh main
+  push:
+    branches:
+      - main # (hoặc nhánh master tùy repo của bạn)
 
 jobs:
   thuc_hanh_doc_file:
